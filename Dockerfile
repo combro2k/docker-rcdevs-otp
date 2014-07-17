@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Martijn van Maurik docker@vmaurik.nl
 
-RUN apt-get update && apt-get install curl
+RUN apt-get update && apt-get install curl -y
 
 WORKDIR /root
 
