@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Martijn van Maurik docker@vmaurik.nl
 
-RUN apt-get update && apt-get install curl make libc6-i386 -y
+RUN apt-get update && apt-get install curl make libc6-i386 lib32ncurses5 lib32z1 -y
 
 WORKDIR /root
 
