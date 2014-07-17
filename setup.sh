@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo Configuring WebADM
 bash /opt/webadm/bin/setup
 
