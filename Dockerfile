@@ -20,10 +20,12 @@ RUN gunzip slapd.sh.gz
 RUN gunzip openotp.sh.gz
 RUN gunzip radiusd.sh.gz
 
-RUN chmod +x slapd.sh && echo 'y' | ./slapd.sh
-RUN chmod +x webadm_all_in_one.sh && echo 'y' | ./webadm_all_in_one.sh
-RUN chmod +x openotp.sh && echo 'y' | ./openotp.sh
-RUN chmod +x radiusd.sh && echo 'y' | ./radiusd.sh
+RUN chmod +x *.sh
+
+RUN echo 'y' | ./slapd.sh
+RUN echo 'y' | ./webadm_all_in_one.sh
+RUN echo 'y' | ./openotp.sh
+RUN echo 'y' | ./radiusd.sh
 
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
