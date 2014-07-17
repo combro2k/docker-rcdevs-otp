@@ -19,7 +19,7 @@ RUN chmod +x webadm_all_in_one.sh && echo 'y' | ./webadm_all_in_one.sh
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
 
-VOLUME /opt/webadmin/conf
+VOLUME /opt/webadm/conf
 VOLUME /opt/slapd/conf
 
 CMD /start.sh
