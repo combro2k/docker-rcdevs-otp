@@ -30,7 +30,8 @@ RUN echo 'y' | ./radiusd.sh
 RUN echo 'y' | ./openotp.sh
 
 ADD start.sh /start.sh
-RUN chmod +x /start.sh
+ADD setup.sh /setup
+RUN chmod +x /start.sh /setup
 
 VOLUME /opt/webadm/conf
 VOLUME /opt/slapd/conf
